@@ -116,6 +116,23 @@ nav li a{
     color: rgba(19, 19, 24, 0.70);
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 46px;
+}
+.destination-section-content{
+    margin: 0px 280px;
+    text-align: center;
+}
+.destination-img img{
+    border-radius: 16px;
+    background: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%);
+    
+    
+}
+#img-1, #img-3, #img-4, #img-6{
+    margin-right: 24px;
+}
+#img-1, #img-2, #img-3, #img-4, #img-5{
+    margin-bottom: 24px;
 }
 
 
@@ -154,18 +171,32 @@ nav li a{
         padding: 16px;
     }
     .tours,
-    .tours-content
+    .tours-content,
+    .destination-section,
+    .destination-section-content
     {
         width: 250px;
         padding: 16px;
         padding-right: 20px;
         margin-left: -75px;
     }
-    .section-text{
-        width: 300px;
+    .section-text
+    {
+        width: 310px;
     }
-    .tours-img img{
-        width: 300px;
+    .destination-section-content .section-title{
+        width: 310px;
+    }
+    .tours-img img
+    {
+        width: 310px;
         padding-top: 10px;
     }
+    .destination-img img
+    {
+        width: 310px;
+        padding-top: 10px;
+        margin-left: -60px;
+    }
+
 }
