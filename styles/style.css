@@ -6,6 +6,9 @@
 header{
     padding: 30px 135px;
 }
+main{
+    padding: 30px 135px;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -90,13 +93,32 @@ nav li a{
     width: 174px;
     border: none;
 }
-.banner-form > button{
+.btn-primary{
     border-radius: 8px;
     background: #FF5400;
     height: 52px;
     width: 174px;
     border: none;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 700;
 }
+.tours-content{
+    display: flex;
+    gap: 20%;
+}
+.section-title{
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.section-text, .section-title ul{
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
 
 /* responsive media queries */
 
@@ -107,7 +129,9 @@ nav li a{
     }
     nav,
     nav > ul,
-    .banner
+    .banner,
+    .tours-content,
+    .tours
     {
         flex-direction: column;
     }
@@ -115,9 +139,10 @@ nav li a{
         width: 100%;
         margin: 0%;
     }
-    .banner-title{
+    .banner-title,
+    .section-title
+    {
         padding-top: 30px;
-        /* padding: 0%; */
         font-size: 22px;
     }
     .banner-form{
@@ -127,5 +152,20 @@ nav li a{
         gap: 10px;
         margin-left: 50px;
         padding: 16px;
+    }
+    .tours,
+    .tours-content
+    {
+        width: 250px;
+        padding: 16px;
+        padding-right: 20px;
+        margin-left: -75px;
+    }
+    .section-text{
+        width: 300px;
+    }
+    .tours-img img{
+        width: 300px;
+        padding-top: 10px;
     }
 }
