@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Mulish:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
 *{
     font-family: 'Mulish', sans-serif;
+    
 }
 
-header, main, footer{
+header,  footer{
     padding: 30px 135px;
 }
 
@@ -11,6 +12,15 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.check-btn{
+    font-size: 20px;
+    color: #5A5A5D;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
 }
 nav img{
     width: 3.5rem;
@@ -40,6 +50,7 @@ nav li{
     font: 1rem;
 }
 nav li a{
+    color: var(--Dark-02, #424247);
     text-decoration: none;
 }
 .banner{
@@ -101,9 +112,21 @@ nav li a{
     font-size: 1rem;
     font-weight: 700;
 }
+.tours,
+.destination-section,
+.service-section,
+.form-section{
+    padding: 30px 135px;
+}
 .tours-content{
     display: flex;
     gap: 20%;
+}
+/* .tours-content p{
+    margin-bottom: 32px;
+} */
+.tours .btn-primary{
+    margin-top: 25px;
 }
 .section-title{
     color: #131318;
@@ -117,14 +140,11 @@ nav li a{
     margin-bottom: 46px;
 }
 .destination-section-content{
-    margin: 0px 280px;
     text-align: center;
 }
 .destination-img img{
     border-radius: 16px;
     background: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%);
-    
-    
 }
 #img-1, #img-3, #img-4, #img-6{
     margin-right: 24px;
@@ -134,7 +154,6 @@ nav li a{
 }
 
 .service-content {
-    /* align-items: center; */
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -241,7 +260,7 @@ footer .nav-title{
     display: flex;
     justify-content: center;
     gap: 20px;
-
+    height: 24px;
 }
 hr{
     margin-top: 50px;
@@ -276,6 +295,7 @@ hr{
 
 /* mobile devices */
 @media screen and (max-width: 600px) {
+    
     header{
         padding: 20px;
     }
@@ -283,13 +303,23 @@ hr{
     nav > ul,
     .banner,
     .tours-content,
-    .form-content
+    .form-content,
+    .title-name,
+    .destination-section,
+    .destination-section-content,
+    .form-section
     {
         flex-direction: column;
     }
+    /* nav > ul{
+        display: none;
+    } */
     .banner-img img{
         width: 100%;
         margin: 0%;
+    }
+    .title-name, .check-btn{
+        display: block;
     }
     .banner-title,
     .section-title,
@@ -307,62 +337,48 @@ hr{
         padding: 16px;
     }
     .tours,
-    .tours-content,
     .destination-section,
-    .destination-section-content
+    .service-section,
+    .form-section
     {
-        width: 250px;
-        margin: 0%;
-        padding: 12px;
-    }
-    main{
-        margin: 0%;
         padding: 0%;
     }
-    .section-text
-    {
-        width: 310px;
+    main{
+        padding: 16px;
+        flex-direction: column;
     }
-    .destination-section-content 
-    {
-        margin-bottom: -50px;
-    }
-    .tours-img img
-    {
-        width: 310px;
-        padding-top: 10px;
-    }
+    .tours-img img,
     .destination-img img
     {
-        width: 310px;
+        height: 100%;
+        width: 100%;
         padding-top: 10px;
     }
     .service-content{
         margin: 0%;
-        padding: 16px;
         grid-template-columns: 1fr;
+        width: 250px;
     }
     .form-section{
         margin-top: 20px;
         
     }
     .form{
-        margin-left: 10px;
-        padding-right: 30px;
-        width: 250px;
+        width: 300px;
     }
     .form h3, .form p, .form hr, .form input
     {
         width: 220px;
+        padding-left: 0%;
     }
     .form button{
-        width: 242px;
+        width: 220px;
+        padding-left: 0%;
     }
     .form-content img{
         margin-top: -50px;
-        height: 300px;
-        width: 320px;
-        margin-left: 10px;
+        height: 330px;
+        width: 340px;
         margin-bottom: 0%;
     }
     .form-content p{
@@ -382,7 +398,7 @@ hr{
         margin-left: 0%;
     }
     .service-1, .service-2, .service-3{
-        width: 245px;
+        width: 275px;
         height: auto;
     }
     footer{
@@ -396,6 +412,7 @@ hr{
     }
     footer .footer-container{
         padding-left: 16px;
+        padding-right: 16px;
     }
 
 }
